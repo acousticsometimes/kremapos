@@ -1,70 +1,128 @@
-# Getting Started with Create React App
+# ☕ Krema POS | Cloud-Based Point of Sale
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![React](https://img.shields.io/badge/Frontend-React.js-61DAFB?logo=react&logoColor=black)](https://reactjs.org/)
+[![Firebase](https://img.shields.io/badge/Backend-Firebase-FFCA28?logo=firebase&logoColor=black)](https://firebase.google.com/)
+[![Tailwind](https://img.shields.io/badge/Styling-Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-## Available Scripts
+**Krema POS** is a comprehensive, cloud-based Point of Sale system designed for cafes and small businesses. Built with React and Firebase, it streamlines operations by connecting front-of-house sales with back-of-house inventory and expense tracking.
 
-In the project directory, you can run:
+It features real-time synchronization, recipe-based inventory deduction, and direct Bluetooth thermal printing support.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📸 Screenshots
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Dashboard, POS, Orders, Inventory, & Expenses
 
-### `npm test`
+<div style="display: flex; gap: 10px;">
+  <img src="./screenshots/dashboard.png" alt="Dashboard" width="45%">
+  <img src="./screenshots/pos.png" alt="POS Interface" width="45%">
+  <img src="./screenshots/orders.png" alt="Orders" width="45%">
+  <img src="./screenshots/inventory.png" alt="Inventory" width="45%">
+  <img src="./screenshots/expenses.png" alt="Expenses" width="45%">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+</div>
+-->
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 💎 Key Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🛒 Smart Point of Sale
+* **Dynamic Cart:** Handle complex orders with product variants/add-ons (e.g., Sugar levels, Toppings).
+* **Discounts:** Apply percentage or fixed-amount discounts.
+* **Payment Methods:** Support for Cash, QRIS, Debit, Credit, and "Compliment" (Free) orders.
+* **Tax & Service Charge:** Configurable global settings for tax and service fees.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 📦 Advanced Inventory & Recipe Management
+* **Ingredient Linking:** Define recipes for products (e.g., 1 Latte = 18g Coffee Beans + 200ml Milk).
+* **Auto-Deduction:** Selling a product automatically deducts the raw ingredients from stock.
+* **Low Stock Alerts:** Real-time notifications when inventory hits minimum thresholds.
 
-### `npm run eject`
+### 🖨️ Hardware Integration
+* **Bluetooth Printing:** Direct integration with Bluetooth Thermal Printers (ESC/POS) for receipts.
+* **Receipt Customization:** Custom headers, footers, and logo support on printed receipts.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 💰 Expense & Supplier Management
+* **Expense Tracking:** Log operational costs, rent, and salaries.
+* **Receipt Uploads:** Upload and store images of physical expense receipts via Firebase Storage.
+* **Supplier Database:** Manage contact details for vendors.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 📊 Analytics & Reporting
+* **Real-time Dashboard:** View daily sales, top-selling items, and sales trends.
+* **Profit & Loss:** Calculate net profit by subtracting COGS (Cost of Goods Sold) and Expenses from Revenue.
+* **Export:** Download detailed sales reports as CSV files.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## � Technical Architecture
 
-## Learn More
+*   **Frontend:** React.js (Create React App)
+*   **Styling:** Tailwind CSS
+*   **Icons:** Lucide React
+*   **Backend:** Firebase (BaaS)
+    *   **Authentication:** Email/Password login & signup.
+    *   **Firestore:** Real-time NoSQL database for orders, products, and inventory.
+    *   **Storage:** Image hosting for product photos and expense receipts.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🚀 Deployment & Local Setup
 
-### Code Splitting
+### Prerequisites
+* Node.js (v14.0 or higher)
+* A Firebase Project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Installation
+1. **Clone the Project**
+   ```bash
+   git clone https://github.com/yourusername/krema-pos.git
+   cd krema-pos
+   ```
 
-### Analyzing the Bundle Size
+2. **Install Project Dependencies**
+   ```bash
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. **Configure Environment Variables**
+   Create a `.env.local` file in the root directory and add your Firebase credentials:
+   ```bash
+   REACT_APP_FIREBASE_API_KEY=your_key
+   REACT_APP_FIREBASE_AUTH_DOMAIN=your_domain.firebaseapp.com
+   REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+   REACT_APP_FIREBASE_STORAGE_BUCKET=your_bucket.appspot.com
 
-### Making a Progressive Web App
+4. **Launch Application**
+   ```bash
+   npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📐 Data Schema (Architecture)
+The database is structured for maximum scalability:
 
-### Advanced Configuration
+users/: Store user roles (Admin vs. Staff) and permissions.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+products/: Contains base prices, categories, and linked ingredient IDs.
 
-### Deployment
+orders/: Time-stamped transactions with nested line-item arrays.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+expenses/: Documented overhead costs for automated P&L reporting.
 
-### `npm run build` fails to minify
+## 📝 Roadmap & Future Enhancements
+[ ] Offline Mode: Implement Service Workers for PWA functionality.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[ ] Kitchen Display System (KDS): A specialized view for kitchen staff.
+
+[ ] Customer Loyalty Program: Points-based system linked to user phone numbers.
+
+
+## 👨‍💻 Author
+Livy Pang
+
+LinkedIn: linkedin.com/in/yourprofile
+
+Portfolio: yourwebsite.com
+
+## ⚖️ License
+This project is licensed under the MIT License - see the LICENSE file for details.
