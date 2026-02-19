@@ -23,7 +23,6 @@ It features real-time synchronization, recipe-based inventory deduction, and dir
   <img src="./screenshots/expenses.png" alt="Expenses" width="45%">
 
 </div>
--->
 
 ---
 
