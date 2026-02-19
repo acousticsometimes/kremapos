@@ -15,14 +15,19 @@ It features real-time synchronization, recipe-based inventory deduction, and dir
 
 ### Dashboard, POS, Orders, Inventory, & Expenses
 
-<div style="display: flex; gap: 10px;">
-  <img src="./screenshots/dashboard.png" alt="Dashboard" width="45%">
-  <img src="./screenshots/pos.png" alt="POS Interface" width="45%">
-  <img src="./screenshots/orders.png" alt="Orders" width="45%">
-  <img src="./screenshots/inventory.png" alt="Inventory" width="45%">
-  <img src="./screenshots/expenses.png" alt="Expenses" width="45%">
+<p align="center">
+  <img src="./screenshots/dashboard.png" width="48%" />
+  <img src="./screenshots/pos.jpg" width="48%" /> 
+</p>
 
-</div>
+<p align="center">
+  <img src="./screenshots/orders.png" width="48%" />
+  <img src="./screenshots/inventory.png" width="48%" />
+</p>
+
+<p align="center">
+  <img src="./screenshots/expenses.png" width="97%" />
+</p>
 
 ---
 
